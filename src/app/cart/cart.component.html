@@ -1,0 +1,8 @@
+<h1>Your Cart</h1>
+<div> {{ getCart().length }}</div> 
+<div *ngIf="getCart().length > 0">
+   <div *ngFor="let cow of getCart(); let i=index;">
+    <p class="my-4 text-zxl"> {{ i+1 }}.{{ cow.name}}</p>
+   </div> 
+</div>
+<div *ngIf="getCart().length == 0">Cart is Empty</div>

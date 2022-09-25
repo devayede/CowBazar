@@ -1,0 +1,15 @@
+<h1>Welcome To Cow.Com</h1>
+<p>Showing list of Nearby Cows For Sell </p>
+<!-- <input type="text" [(ngModel)] = "mySearch" /> -->
+
+<div> Showing Result of {{ mySearch }} </div>
+<!-- <button (click)="handleClick()">Show Lists</button> -->
+<button (click)="isClicking = !isClicking">
+    <span *ngIf="!isClicking"> Show Lists </span>
+    <span *ngIf="isClicking"> Hide Lists </span>
+</button>
+<ul *ngIf="isClicking">
+    <ng-container *ngFor="let singlecow of cows; let i=index">
+        <app-cow [cow]="singlecow"></app-cow>
+</ng-container>
+</ul>

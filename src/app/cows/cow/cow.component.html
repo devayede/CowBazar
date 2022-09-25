@@ -1,0 +1,7 @@
+<li class="cow">
+    <!-- <p class="sno">{{ i + 1}}</p> -->
+    <img [src]="cow.image" alt="{{ cow.name }}" width="100"/>
+   <p class="title">Cow name is {{ cow.name }}  And price is {{ cow.price | currency:'INR'}}</p>
+   <button *ngIf="!isInCart" (click)="addToCart()">Add to Cart</button>
+   <button *ngIf="isInCart" (click)="removeFromCart()">Remove From Cart</button>
+  </li>
